@@ -4,13 +4,8 @@ from tkinter import ttk
 
 
 root  = tk.Tk()
-root.title("SENAI - Sistemas")
-root.geometry("800x600")
-#minha_imagem = tk.photoimage(file+"minha-imagem.png"
-
-label = tk.Label(root, imagem=images.png)
-label.pack(expand=True)
-
-
+root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
+root.geometry("900x900")
+# O CODIGO VAI AQUI
 
 root.mainloop()
