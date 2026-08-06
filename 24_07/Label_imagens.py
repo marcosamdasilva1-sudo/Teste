@@ -4,9 +4,9 @@ from tkinter import ttk
 
 
 root  = tk.Tk()
-root.title("SENAI - Sistemas")
+root.title("SENAI - Desenvolvimento de Sistemas")
 root.geometry("800x600")
-#Label _ Imagens
+#Label_ Imagens
 minha_imagem = tk.PhotoImage(file="images.png")
 
 label = tk.Label(root, image=minha_imagem)

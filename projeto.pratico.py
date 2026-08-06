@@ -8,7 +8,7 @@
 
 
 
-mport tkinter as tk
+import tkinter as tk
 from tkinter import messagebox 
 
 
@@ -17,7 +17,7 @@ root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
 root.geometry("900x900")
    
 label1 = tk.Label(root, text = "LOGIN)")
-label2 = tk.Label(root, text = "Faça se Login)") 
+label2 = tk.Label(root, text = "Faça seu Login)") 
 label3 = tk.Label(root, text = "Usuário")
 label4 = tk.Label(root, text= "Senha")
 lab
