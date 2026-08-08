@@ -41,11 +41,11 @@ label_usuario.pack(side = "left", padx
 
 
 
-label_usuario
+#label_usuario
 # O CODIGO VAI AQUI
 
 
 
-tk.Label(root,text="senha")
+#tk.Label(root,text="senha")
 
 root.mainloop()
