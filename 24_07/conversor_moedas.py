@@ -6,50 +6,82 @@
 #3 resultado formatado - exibir conversao em duas casas decimais
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk,messagebox
 
 root  = tk.Tk()
-root.title("Conversor  Automatico de Moedas")
-root.geometry("900x900")
+root.title("Conversor Automatico de Moedas")
+root.geometry("400x400")
 
-#campo label conversor 
-#nome
+# campo taxas
 
-label_conversor = tk.Label(root, text="Valor")
-label_conversor.grid(row=0, column=0) 
+taxas={"USD":1.00,
+       "JPY":157.00,
+       "EUR":0.92,
+       "BRL":5.50,
+       "GBP":0.79}
+
+#campo label valor 
+
+
+label_valor = tk.Label(root, text="Valor")
+label_valor.grid(row=0, column=0) 
 
 
 
-entry_conversor  = tk.Entry(root)
-entry_conversor.grid(row=0, column=1)
+entry_valor  = tk.Entry(root)
+entry_valor.grid(row=0, column=1,sticky="ew")
 
 
-#campo valor
+#campo moedadeorigem
 
-label_Valor = tk.Label(root, text="Moeda de Origem")
-label_Valor.grid(row=1, column=0)
+label_moedaorigem = tk.Label(root, text="Moeda de Origem")
+label_moedaorigem.grid(row=1, column=0)
 
 combobox_moedaorigem = ttk.Combobox(root, values=["USD","BRL","EUR","JPY"])
-combobox_moedaorigem.grid(row=1, column=2) 
+combobox_moedaorigem.grid(row=1, column=1,padx=5,pady=5) 
+
+# campo funcao de conversao
+
+def conversao():
+    busca_valor=float(entry_valor.get()).replace("," , ".")
+
+    moeda_origem = combobox_moedaorigem()
+    moeda_destino =combobox_destino.get()
+
+    #definir valor conversao
+
+    valor_usd = valor / taxas [moeda_origem]
+    valor_destino =  valor / taxas{"moeda_destino"}
+
+
+
 
 
 
 #moeda destino
 
 label_valor = tk.Label(root, text="Moeda de Destino")
-label_valor.grid(row=2, column=0)
+label_valor.grid(row=2, column=0,padx=15,pady=15)
 
 
 combobox_moedadestino = ttk.Combobox(root, values=["USD","BRL","EUR","JPY"])
-combobox_moedadestino.grid(row=2, column=2) 
+combobox_moedadestino.grid(row=2, column=1,padx=15,pady=15) 
 
 # campo conversão
 
-label_conversor = tk.Label(root, text="Converter")
-label_conversor.grid(row=3, column=0) 
 
-entry_conversor  = tk.Entry(root)
-entry_conversor.grid(row=3, column=2)
+#messagebox.showinfo("Informação", "Você recebeu um alerta!")
+
+button = tk.Button(root,text="Converter")
+
+button.grid(row=3,column=1,padx=5,pady=5)
+
+
+
+
+
+            
+
 
 
 
