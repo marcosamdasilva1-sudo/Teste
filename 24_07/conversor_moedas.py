@@ -40,21 +40,27 @@ label_moedaorigem.grid(row=1, column=0)
 combobox_moedaorigem = ttk.Combobox(root, values=["USD","BRL","EUR","JPY"])
 combobox_moedaorigem.grid(row=1, column=1,padx=5,pady=5) 
 
+
+
+combobox_moedadestino = ttk.Combobox(root, values=["USD","BRL","EUR","JPY"])
+combobox_moedadestino.grid(row=2, column=1,padx=5,pady=5) 
+
 # campo funcao de conversao
 
 def conversao():
-    busca_valor=float(entry_valor.get()).replace("," , ".")
 
-    moeda_origem = combobox_moedaorigem()
-    moeda_destino =combobox_destino.get()
+    busca_valor=float(entry_valor.get().replace("," , "."))
+
+    moeda_origem = combobox_moedaorigem.get()
+    moeda_destino = combobox_moedadestino.get()
 
     #definir valor conversao
 
-    valor_usd = valor / taxas [moeda_origem]
-    valor_destino =  valor / taxas{"moeda_destino"}
+    valor_usd = busca_valor / taxas [moeda_origem]
+    valor_destino = busca_valor * taxas[moeda_destino]
 
-
-
+    label_resultado=tk.Label(f"{busca_valor:.2f} {moeda_origem} = {valor_destino:.2f} {moeda_destino}")
+    label_resultado.grid(row=6,column=1)
 
 
 
@@ -72,16 +78,17 @@ combobox_moedadestino.grid(row=2, column=1,padx=15,pady=15)
 
 #messagebox.showinfo("Informação", "Você recebeu um alerta!")
 
-button = tk.Button(root,text="Converter")
-
-button.grid(row=3,column=1,padx=5,pady=5)
-
+button= tk.Button(text="Converter", command=conversao)
+button.grid(row=5, column=1)
 
 
 
 
-            
 
+
+
+ #converter
+ 
 
 
 
