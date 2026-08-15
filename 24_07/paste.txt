@@ -1,0 +1,36 @@
+def jogar(jogada):
+    global pontos_pessoa
+    global pontos_pc
+    global rodadas
+    opcoes =["pedra", "papel","tesoura"]
+
+
+
+    if rodadas > 0:
+
+        print(rodadas)
+
+    escolha_pc = random.choice(opcoes)
+    escolha_pessoa = jogada
+    print(escolha_pessoa, escolha_pc)
+
+
+    global jogador_pessoa
+    global jogador_pc
+
+
+def jogar(jogada):
+    global pontos_pessoa
+    global pontos_pc
+    global rodadas
+    opcoes =["pedra", "papel","tesoura"]
+
+
+
+    if rodadas > 0:
+
+        print(rodadas)
+
+    escolha_pc = random.choice(opcoes)
+    escolha_pessoa = jogada
+    print(escolha_pessoa, escolha_pc)

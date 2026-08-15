@@ -56,6 +56,24 @@ app_vs = Label(frame_cima, text=":", height=1, anchor="center",
 app_vs.place(x=125, y=20)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #barra de empate
 app_empate = Label(frame_cima, text="", width=255, anchor="center", bg=cor3)
 app_empate.place(x=0, y=95)
