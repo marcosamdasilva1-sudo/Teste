@@ -117,15 +117,23 @@ rodada = 5'''
 def jogar(escolha_pessoa):
     global pontos_pessoa
     global pontos_pc
-    global rodada
+    global rodadas
+    opcoes = ["pedra", "Papel", "tesoura"]
 
     escolha_pc = random.choice(["pedra", "papel", "tesoura"])
+    escolha _pc
+
+    if rodadas > 0:
+        print(rodadas)
+        Escolha_pc = random.choice(opcoes)
+
 
     if escolha_pessoa == escolha_pc:
         resultado = "Empate!"
     elif (escolha_pessoa == "pedra" and escolha_pc == "tesoura") or (escolha_pessoa == "papel" and escolha_pc == "pedra") or (escolha_pessoa == "tesoura" and escolha_pc == "papel"):
         resultado = "Você ganhou!"
         pontos_pessoa += 1
+
 
 
 
