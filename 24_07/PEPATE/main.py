@@ -100,9 +100,6 @@ btn_tesoura.place(x=125, y=60)
     global btn_tesoura
 
    
-
-
-
 global escolha_pessoa
 global escolha_pc
 global pontos_pc
@@ -121,11 +118,24 @@ def jogar(escolha_pessoa):
     opcoes = ["pedra", "Papel", "tesoura"]
 
     escolha_pc = random.choice(["pedra", "papel", "tesoura"])
-    escolha _pc
+    escolha_pc
 
     if rodadas > 0:
         print(rodadas)
         Escolha_pc = random.choice(opcoes)
+        escolha_pessoa = jogada
+        print(escolha_pessoa, Escolha_pc)
+
+    else:
+        terminar_jogo()
+
+        #funcao iniciar_jogo()
+
+    def iniciar_jogo():
+        global icone_pedra
+        global icone_papel
+
+
 
 
     if escolha_pessoa == escolha_pc:
@@ -133,6 +143,25 @@ def jogar(escolha_pessoa):
     elif (escolha_pessoa == "pedra" and escolha_pc == "tesoura") or (escolha_pessoa == "papel" and escolha_pc == "pedra") or (escolha_pessoa == "tesoura" and escolha_pc == "papel"):
         resultado = "Você ganhou!"
         pontos_pessoa += 1
+
+        #caso empate
+    if testa_empate(escolha_pessoa, escolha_pc):
+        app_empate["bg"] = cor3
+
+    elif testa_vitoria_pessoa(escolha_pessoa, escolha_pc):
+        pontos_pessoa +=10
+        app_pessoa_linha["bg"] = cor4
+    elif testa_vitoria_pc(escolha_pessoa, escolha_pc):
+        pontos_ += 10
+        app_pc_linha["bg"] = cor4
+
+        # mostrar_pontos(pontos_pessoa, pontos_pc)
+
+else:
+    terminar_jogo()
+
+
+
 
 
 
