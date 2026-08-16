@@ -73,20 +73,20 @@ app_jogada_jogadorpc.place (x=190, y=10)'''
 icone_pedra = Image.open("pedra.png")
 icone_pedra = icone_pedra.resize((50, 50), Image.Resampling.LANCZOS)
 icone_pedra = ImageTk.PhotoImage(icone_pedra)
-btn_pedra = tk.Button(frame_baixo, command=lambda:jogar("pedra"), width=50, height=50, image=icone_pedra, bg=cor5)
+btn_pedra = tk.Button(frame_baixo, command=lambda:jogar("pedra"), width=50, height=50, image=icone_pedra, bg=cor0, fg=cor0, compound="center")
 btn_pedra.place(x=15, y=60)
 
 
 icone_papel = Image.open("papel.png")
 icone_papel= icone_papel.resize((50, 50), Image.Resampling.LANCZOS)
 icone_papel= ImageTk.PhotoImage(icone_papel)
-btn_papel = tk.Button(frame_baixo, command=lambda:jogar("papel"), width=50, height=50, image=icone_papel, bg=cor5)
+btn_papel = tk.Button(frame_baixo, command=lambda:jogar("papel"), width=50, height=50, image=icone_papel, bg=cor0, fg=cor0, compound="center")
 btn_papel.place(x=70, y=60)
 
 icone_tesoura = Image.open("tesoura.png")
 icone_tesoura = icone_tesoura.resize((50, 50), Image.Resampling.LANCZOS)
 icone_tesoura = ImageTk.PhotoImage(icone_tesoura)  
-btn_tesoura = tk.Button(frame_baixo, command=lambda:jogar("tesoura"), width=50, height=50, image=icone_tesoura, bg=cor5)
+btn_tesoura = tk.Button(frame_baixo, command=lambda:jogar("tesoura"), width=50, height=50, image=icone_tesoura, bg=cor0,fg=cor0, compound="center" )
 btn_tesoura.place(x=125, y=60)
 
 #funcao iniciar jogo
@@ -110,8 +110,32 @@ rodada = 5'''
 
 
 #funcao logica do jogo
+def jogar(jogada):
+    global pontos_pessoa
+    global pontos_pc
+    global rodadas
+    opcoes = ["pedra", "papel", "tesoura"]
+
+    if rodadas > 0:
+     print(rodadas)
+     Escolha_pc = random.choice(opcoes)
+     escolha_pessoa = jogada
+     print(escolha_pessoa, Escolha_pc)
+
+    else:
+    terminar_jogo()
+
+        
+#funcao iniciar_jogo()
+
+def iniciar_jogo():
+                
+    global icone_pedra
+    global icone_papel
+         
 
 def jogar(escolha_pessoa):
+
     global pontos_pessoa
     global pontos_pc
     global rodadas
@@ -119,25 +143,7 @@ def jogar(escolha_pessoa):
 
     escolha_pc = random.choice(["pedra", "papel", "tesoura"])
     escolha_pc
-
-    if rodadas > 0:
-        print(rodadas)
-        Escolha_pc = random.choice(opcoes)
-        escolha_pessoa = jogada
-        print(escolha_pessoa, Escolha_pc)
-
-    else:
-        terminar_jogo()
-
-        #funcao iniciar_jogo()
-
-    def iniciar_jogo():
-        global icone_pedra
-        global icone_papel
-
-
-
-
+    
     if escolha_pessoa == escolha_pc:
         resultado = "Empate!"
     elif (escolha_pessoa == "pedra" and escolha_pc == "tesoura") or (escolha_pessoa == "papel" and escolha_pc == "pedra") or (escolha_pessoa == "tesoura" and escolha_pc == "papel"):
@@ -157,8 +163,9 @@ def jogar(escolha_pessoa):
 
         # mostrar_pontos(pontos_pessoa, pontos_pc)
 
-else:
+    else:
     terminar_jogo()
+
 
 
 
