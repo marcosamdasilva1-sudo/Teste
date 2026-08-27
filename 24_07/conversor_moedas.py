@@ -32,7 +32,7 @@ entry_valor  = tk.Entry(root)
 entry_valor.grid(row=0, column=1,sticky="ew")
 
 
-#campo moedadeorigem
+#campo moeda de origem
 
 label_moedaorigem = tk.Label(root, text="Moeda de Origem")
 label_moedaorigem.grid(row=1, column=0)

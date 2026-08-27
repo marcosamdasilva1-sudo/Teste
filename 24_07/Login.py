@@ -37,7 +37,7 @@ frame_senha = tk.Frame(root)
 frame_senha.pack(anchor ="w")
 
 label_usuario = tk.Label(root, text = "Usuário")
-label_usuario.pack(side = "left", padx
+label_usuario.pack(side = "left", padx=50)
 
 
 
