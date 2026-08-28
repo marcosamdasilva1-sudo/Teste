@@ -5,7 +5,14 @@ canvas = Canvas(janela, width=400, height=300, bg= "yellow")
 
 
 
-canvas.create_polygon(10, 100, 60, 50, 110, 100, 150, 80, 35, 150, fill = "green")
+canvas.create_polygon
+(10, 100,
+ 60, 50, 
+ 110, 100,
+ 150, 80,
+ 40, 150,
+ fill = "green"
+ )
 
 
 
