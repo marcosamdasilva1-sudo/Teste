@@ -1,7 +1,7 @@
-from tkinter import Tk, Canvas
+from tkinter import Tk, canvas
 janela = Tk()
 janela.geometry("500x400")
-canvas = Canvas(janela, width=400, height=300, bg= "yellow")
+canvas = canvas(janela, width=400, height=300, bg= "yellow")
 
 
 #metodo

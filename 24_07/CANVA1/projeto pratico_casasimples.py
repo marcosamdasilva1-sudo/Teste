@@ -1,7 +1,7 @@
 from tkinter import Tk, Canvas
 janela = Tk()
 janela.geometry("500x400")
-canvas = Canvas(janela, width=400, height=300, bg= "yellow")
+canvas = Canvas(janela, width=700, height=400, bg= "yellow")
 
 
 
@@ -28,16 +28,13 @@ canvas.create_polygon(
  )
 
 # carro
+#x1 move para esquerda, y1 mexe na altura do quadrado,x2 move quadrado para direita,
+# y2 move para cima ou para baixo, dimuindo a largura do quadrado 
+canvas.create_rectangle(300,150,450,200, fill = "black")
 
+# rodas do carro
 
-canvas.create_polygon(
- 100, 100,
- 60, 50, 
- 110, 100,
- 85, 150,
- 35, 150,
- fill = "green"
- )
+canvas.create_oval(500,150, 100, 200, fill= "red")
 
 
 
