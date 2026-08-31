@@ -1,7 +1,7 @@
-from tkinter import Tk, Canvas
+from tkinter import Tk, canvas
 janela = Tk()
 janela.geometry("500x400")
-canvas = Canvas(janela, width=700, height=400, bg= "yellow")
+canvas = canvas(janela, width=700, height=400, bg= "yellow")
 
 
 
@@ -34,7 +34,7 @@ canvas.create_rectangle(300,150,450,200, fill = "black")
 
 # rodas do carro
 
-canvas.create_oval(500,150, 100, 200, fill= "red")
+canvas.create_oval(100,250, 250, 300, fill= "white")
 
 
 
