@@ -21,6 +21,7 @@ canvas.create_rectangle(180, 150, 200, 110, fill = "orange")
 #telhado
 canvas.create_polygon(
  50, 100,
+
  150, 50, 
  250, 100,
  
@@ -34,8 +35,10 @@ canvas.create_rectangle(300,150,450,200, fill = "black")
 
 # rodas do carro
 
-canvas.create_oval(100,250, 250, 300, fill= "white")
+canvas.create_oval(100,100, 250, 250, fill= "white")
 
+#rodas do carro
+canvas.create_oval(100,100, 250, 250, fill= "white")
 
 
 
