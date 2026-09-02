@@ -116,16 +116,6 @@ def faixa3_cor():
         print("mensagem invalida")
     
 
-# 4ª faixa refere-se a tolerância em porcentagem variando aproximadamente em  == 5/100, para cima ou para baixo
-
-def faixa_tolerancia():
-
-    if faixa_tolerancia == "ouro":
-        return 0.05
-    
-    elif faixa_tolerancia =="prata":
-
-        return 0.10
 
 # box vamos ter o valor do resistor
 
@@ -164,6 +154,61 @@ def fator_multiplicadordecores():
         
     elif faixa3_cor =="branco":
         return 10000000000
+
+# 4ª faixa refere-se a t
+# tolerância em porcentagem variando aproximadamente em  == 5/100, para cima ou para baixo
+
+def faixa_tolerancia():
+
+    if faixa_tolerancia == "marrom":
+        return 0.01
+    
+    elif faixa_tolerancia =="verde":
+
+        return 0.05
+
+    elif faixa_tolerancia =="azul":
+
+        return 0.0025
+
+    elif faixa_tolerancia =="violeta":
+
+        return 0.001
+
+    elif faixa_tolerancia =="cinza":
+
+        return 0.0005
+
+    elif faixa_tolerancia =="dourado":
+    
+        return 0.0005
+
+    elif faixa_tolerancia =="prateado":
+    
+        return 0.1
+
+root  = tk.Tk()
+root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
+root.geometry("900x900")
+
+#combobox - lista suspensa
+
+def selecao_mudou(evento):
+    label.config(text=f"{evento.widget.get()}selecionado!")
+
+combobox = ttk.Combobox(root, values=["preto", "marrom", "vermelho", "laranja", "amarelo","verde", "azul", "violeta","cinza", "dourado"])
+
+label = tk.Label(root, text="tabela de cores!")
+combobox.set("Primeira faixa")
+
+combobox.bind("<<ComboboxSelected>>", selecao_mudou)
+
+combobox.pack()
+
+
+
+
+label.pack()
 
     
 
