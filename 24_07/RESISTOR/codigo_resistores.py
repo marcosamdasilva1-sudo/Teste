@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
-root = tk.Tk()
+root  = tk.Tk()
+root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
+root.geometry("500x500")
 
 #cores
 #1ª faixa refere-se ao algarismo significativo de cada cor
@@ -31,6 +33,7 @@ def faixa1_cor():
     elif faixa1_cor =="violeta":
 
         return 7
+    
     elif faixa1_cor =="cinza":
         return 8
 
@@ -38,7 +41,7 @@ def faixa1_cor():
         return 9
 
     else:
-      print("mensagem invalida")
+      print("escolha opçao válida")
 
 
 #2ª faixa refere-se ao algarismo significativo da cada cor 
@@ -187,37 +190,43 @@ def faixa_tolerancia():
     
         return 0.1
 
-root  = tk.Tk()
-root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
-root.geometry("900x900")
 
-#combobox - lista suspensa
+combobox1 = ttk.Combobox(root, values=["preto", "marrom", "vermelho", "laranja", "amarelo", "verde", "azul", "violeta", "cinza", "branco"])
+combobox1.grid(row=0, column=1)
+tk.Label(root, text="1ª Faixa").grid(row=0, column=0)
 
-def selecao_mudou(evento):
-    label.config(text=f"{evento.widget.get()}selecionado!")
+combobox2 = ttk.Combobox(root, values=["preto", "marrom", "vermelho", "laranja", "amarelo", "verde", "azul", "violeta", "cinza", "branco"])
+combobox2.grid(row=1, column=1)
+tk.Label(root, text="2ª Faixa").grid(row=1, column=0)
 
-combobox = ttk.Combobox(root, values=["preto", "marrom", "vermelho", "laranja", "amarelo","verde", "azul", "violeta","cinza", "dourado"])
+combobox3 = ttk.Combobox(root, values=["preto", "marrom", "vermelho", "laranja", "amarelo", "verde", "azul", "violeta", "cinza", "branco"])
+combobox3.grid(row=2, column=1)
+tk.Label(root, text="3ª faixa").grid(row=2, column=0)
 
-label = tk.Label(root, text="tabela de cores!")
-combobox.set("Primeira faixa")
+combobox4 = ttk.Combobox(root, values=["marrom", "verde", "azul", "violeta", "cinza", "dourado", "prateado"])
+combobox4.grid(row=3, column=1)
+tk.Label(root, text="4ª faixa").grid(row=3, column=0)
 
-combobox.bind("<<ComboboxSelected>>", selecao_mudou)
+combobox5 = ttk.Combobox(root, values=["ohms"])
+combobox5.grid(row=4, column=1)
+tk.Label(root, text="5ª faixa").grid(row=4, column=0)
 
-combobox.pack()
+def calcular_resistor():
+    faixa1 = faixa1_cor() 
+    faixa2 = faixa2_cor()
+    faixa3 = faixa3_cor()
+    tolerancia = faixa_tolerancia()
 
-
-
-
-label.pack()
-
+    def calcular_valor_resistor(faixa1, faixa2, faixa3, faixa4,):
+    valor() = (faixa1 * 10 + faixa2) * (10 ** faixa3)
+    return valor
     
-
-
-
-
+        
+  
 
 
 root.mainloop()
+
 
 
 
