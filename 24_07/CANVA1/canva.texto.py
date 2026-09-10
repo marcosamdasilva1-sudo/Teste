@@ -1,7 +1,7 @@
-from tkinter import Tk, canvas
+from tkinter import Tk, Canvas
 janela = Tk()
 janela.geometry("500x400")
-canvas = canvas(janela, width=400, height=300, bg= "yellow")
+Canvas = Canvas(janela, width=400, height=300, bg= "yellow")
 
 
 #metodo
@@ -12,15 +12,15 @@ canvas = canvas(janela, width=400, height=300, bg= "yellow")
 #exemplo), "bold" gera efeito de negrito na font, anchor trata do alinhamento do texto na pagina
 
 
-canvas.create_text(200, 100, text="olá", font=("Arial", 40), fill="blue" )
+Canvas.create_text(200, 100, text="olá", font=("Arial", 40), fill="blue" )
 
-canvas.create_text(200, 150, text="logica de programação", font=("Arial", 10), fill="green", anchor="w" )
-
-
-canvas.create_text(200, 200, text="logica de programação", font=("Arial", 10, "bold"), fill="black", anchor="e" )
+Canvas.create_text(200, 150, text="logica de programação", font=("Arial", 10), fill="green", anchor="w" )
 
 
-canvas.pack()
+Canvas.create_text(200, 200, text="logica de programação", font=("Arial", 10, "bold"), fill="black", anchor="e" )
+
+
+Canvas.pack()
 janela.mainloop()
 
 

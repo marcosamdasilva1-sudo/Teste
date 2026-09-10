@@ -1,14 +1,14 @@
-from tkinter import Tk, canvas
+from tkinter import Tk, Canvas
 janela = Tk()
 janela.geometry("500x400")
-canvas = canvas(janela, width=400, height=300, bg= "yellow")
+Canvas = Canvas(janela, width=400, height=300, bg= "yellow")
 
 
 
-canvas.create_rectangle(50, 50, 150, 100, fill = "blue")
+Canvas.create_rectangle(50, 50, 150, 100, fill = "blue")
 
 
 
 
-canvas.pack()
+Canvas.pack()
 janela.mainloop()

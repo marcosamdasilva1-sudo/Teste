@@ -1,43 +1,48 @@
 import tkinter as tk
+from tkinter import Tk,Canvas
+janela = Tk()
 from tkinter import ttk
 root  = tk.Tk()
 root.title("SENAI - Curso Técnico em Desenvolvimento de Sistemas")
 root.geometry("500x500")
+janela.geometry("600x400")
+Canvas =Canvas(janela, width=600, height=400, bg= "white")
+
 
 #cores
 #1ª faixa refere-se ao algarismo significativo de cada cor
 
-def faixa1_cor():
+def faixa1_cor(cor):
 
-    if faixa1_cor == "preto":
+    if cor == "preto":
         return 0
 
-    elif faixa1_cor =="marrom":
+    elif cor =="marrom":
         return  1
 
-    elif faixa1_cor == "vermelho":
+    elif cor == "vermelho":
         return  2
 
-    elif faixa1_cor =="laranja":
+    elif cor =="laranja":
         return 3
 
-    elif faixa1_cor == "amarelo":
+    elif cor == "amarelo":
         return 4
 
-    elif faixa1_cor =="verde":
+    elif cor =="verde":
         return 5
 
-    elif faixa1_cor =="azul":
+    elif cor =="azul":
         return 6
 
-    elif faixa1_cor =="violeta":
+    elif cor =="violeta":
 
         return 7
     
-    elif faixa1_cor =="cinza":
+    elif cor =="cinza":
         return 8
 
-    elif faixa1_cor =="branco":
+    elif cor =="branco":
         return 9
 
     else:
@@ -46,36 +51,36 @@ def faixa1_cor():
 
 #2ª faixa refere-se ao algarismo significativo da cada cor 
 
-def faixa2_cor():
+def faixa2_cor(cor):
 
-    if faixa2_cor == "preto":
+    if cor == "preto":
         return 0
     
-    elif faixa2_cor =="marrom":
+    elif cor =="marrom":
        return  1
     
-    elif faixa2_cor == "vermelho":
+    elif cor == "vermelho":
         return  2
     
-    elif faixa2_cor =="laranja":
+    elif cor =="laranja":
         return 3
     
-    elif faixa2_cor == "amarelo":
+    elif cor == "amarelo":
         return 4
     
-    elif faixa2_cor =="verde":
+    elif cor =="verde":
         return 5
     
-    elif faixa2_cor =="azul":
+    elif cor =="azul":
         return 6
     
-    elif faixa2_cor =="violeta":
+    elif cor =="violeta":
         return 7
 
-    elif faixa2_cor =="cinza":
+    elif cor =="cinza":
         return 8
     
-    elif faixa2_cor =="branco":
+    elif cor =="branco":
         return 9
     
     else:
@@ -83,36 +88,36 @@ def faixa2_cor():
     
 #3ª faixa refere-se a quantidade de zeros
 
-def faixa3_cor():
+def faixa3_cor(cor):
     
-    if faixa3_cor == "preto":
+    if cor == "preto":
         return 0
     
-    elif faixa3_cor=="marrom":
+    elif cor=="marrom":
        return  1
     
-    elif faixa3_cor == "vermelho":
+    elif cor == "vermelho":
         return  2
     
-    elif faixa3_cor =="laranja":
+    elif cor =="laranja":
         return 3
     
-    elif faixa3_cor == "amarelo":
+    elif cor == "amarelo":
         return 4
     
-    elif faixa3_cor =="verde":
+    elif cor =="verde":
         return 5
     
-    elif faixa3_cor =="azul":
+    elif cor =="azul":
         return 6
     
-    elif faixa3_cor =="violeta":
+    elif cor =="violeta":
         return 7
 
-    elif faixa3_cor=="cinza":
+    elif cor=="cinza":
         return 8
     
-    elif faixa3_cor =="branco":
+    elif cor =="branco":
         return 9
     
     else:
@@ -126,67 +131,67 @@ def faixa3_cor():
 #faixa prata == 10/100
 #faixa branca == 20/100
 
-def fator_multiplicadordecores():
+def fator_multiplicadordecores(cor):
 
-    if faixa3_cor == "preto":
+    if cor == "preto":
         return 1
         
-    elif faixa3_cor=="marrom":
+    elif cor=="marrom":
         return  100
         
-    elif faixa3_cor == "vermelho":
+    elif cor == "vermelho":
         return  1000
         
-    elif faixa3_cor =="laranja":
+    elif cor =="laranja":
         return 10000
         
-    elif faixa3_cor == "amarelo":
+    elif cor == "amarelo":
         return 100000
         
-    elif faixa3_cor =="verde":
+    elif cor =="verde":
         return 1000000
         
-    elif faixa3_cor =="azul":
+    elif cor =="azul":
         return 10000000
         
-    elif faixa3_cor =="violeta":
+    elif cor =="violeta":
         return 100000000
     
-    elif faixa3_cor=="cinza":
+    elif cor=="cinza":
         return 1000000000
         
-    elif faixa3_cor =="branco":
+    elif cor =="branco":
         return 10000000000
 
 # 4ª faixa refere-se a t
 # tolerância em porcentagem variando aproximadamente em  == 5/100, para cima ou para baixo
 
-def faixa_tolerancia():
+def faixa_tolerancia(cor):
 
-    if faixa_tolerancia == "marrom":
+    if cor == "marrom":
         return 0.01
     
-    elif faixa_tolerancia =="verde":
+    elif cor =="verde":
 
         return 0.05
 
-    elif faixa_tolerancia =="azul":
+    elif cor =="azul":
 
         return 0.0025
 
-    elif faixa_tolerancia =="violeta":
+    elif cor =="violeta":
 
         return 0.001
 
-    elif faixa_tolerancia =="cinza":
+    elif cor =="cinza":
 
         return 0.0005
 
-    elif faixa_tolerancia =="dourado":
+    elif cor =="dourado":
     
         return 0.0005
 
-    elif faixa_tolerancia =="prateado":
+    elif cor =="prateado":
     
         return 0.1
 
@@ -205,23 +210,58 @@ tk.Label(root, text="3ª faixa").grid(row=2, column=0)
 
 combobox4 = ttk.Combobox(root, values=["marrom", "verde", "azul", "violeta", "cinza", "dourado", "prateado"])
 combobox4.grid(row=3, column=1)
-tk.Label(root, text="4ª faixa").grid(row=3, column=0)
+tk.Label(root, text="tolerância").grid(row=3, column=0)
 
-combobox5 = ttk.Combobox(root, values=["ohms"])
-combobox5.grid(row=4, column=1)
-tk.Label(root, text="5ª faixa").grid(row=4, column=0)
 
-def calcular_resistor():
-    faixa1 = faixa1_cor() 
-    faixa2 = faixa2_cor()
-    faixa3 = faixa3_cor()
-    tolerancia = faixa_tolerancia()
+resultado = tk.Label(root, text="")
+resultado.grid(row=6, column=0, columnspan=2)
 
-    def calcular_valor_resistor(faixa1, faixa2, faixa3, faixa4,):
-    valor() = (faixa1 * 10 + faixa2) * (10 ** faixa3)
-    return valor
-    
-        
+
+def calcular():
+    cor1 = combobox1.get()
+    cor2 = combobox2.get()
+    cor3 = combobox3.get()
+    cor4 = combobox4.get()
+
+    numero = faixa1_cor(cor1) *10 + faixa2_cor(cor2) 
+    resistencia = numero * faixa3_cor (cor3) 
+    tolerancia = faixa_tolerancia(cor4) 
+    variacao_minima = resistencia - (resistencia * tolerancia / 100)
+    variacao_maxima = resistencia + (resistencia * tolerancia /100)
+    resultado.config(
+            text=f"Resistencia{resistencia}Ω ±{tolerancia}%"
+
+    )
+
+
+
+
+
+button = tk.Button(root,text="calcular resistencia", command=calcular).grid(row=5,column=1)
+
+
+
+
+
+
+
+
+
+Canvas.create_rectangle(50, 50, 350, 100, fill = "orange")
+
+Canvas.create_line (125, 25, 50, 100, fill = "black", width=3)
+Canvas.create_line (125, 125, 50, 500, fill = "black", width=3)
+
+
+Canvas.pack()
+
+
+
+
+
+
+
+     
   
 
 
